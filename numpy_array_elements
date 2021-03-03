@@ -1,0 +1,30 @@
+import numpy as np
+
+# slice
+# numpy indexes are zero-based
+my_array = np.array([15, 7, 54, 108, 99])
+my_array[0] # 15
+my_array[-1] = 2 # to re-assign a value
+
+two_dimensional = np.arange(40)
+two_dimensional.shape = (5, 8)
+two_dimensional
+# to access row
+two_dimensioanl[3]
+# to access an element
+two_dimensional[3, 5]
+
+# boolean mask
+# python logical operator
+my_array = np.array([15, 7, 54, 108, 99])
+zero_mod_2 mask = 0 == (my_array % 2) 
+zero_mod_2_mask # returns boolean results
+sub_array = my_array[zero_mod_2_mask]
+sub_array # returns a new array with the elements returned True
+
+# numpy logical operator
+mod_test = 0 == (my_array % 2)
+mod_test
+# numpy logical operators can provide faster result in finding elements in large arrays
+
+# numpy suuports complex data structures: structured array
