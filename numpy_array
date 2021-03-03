@@ -1,0 +1,47 @@
+# import numpy
+import numpy as np
+
+# check the version of numpy
+print(np.__version__)
+
+# create an array from a list, default type = int
+my_list = [1, 2, 3, 4, 5]
+my_array_from_list = np.array(my_list)
+# print the array
+my_array_from_list 
+
+# arithmetic operations
+my_array_from_list * 100
+
+# create an array from a tuple
+my_tuple = (16, 3.25, 8+2j)
+my_array_from_tuple = np.array(my_tuple)
+# print the array
+my_array_from_tuple
+# the result will show that each elements in the tuple was promoted to complex number in the array
+# within numpy, every element with an array has to have the same type
+
+# when use the asterisk (*) with a python tuple, the asterisk works as a replicate operator
+# when use the asterisk with a numpy array, the asterisk works as multiplication operator
+
+# intrinsic functions to create array
+range_array = np.arange(15)
+# this will create a list between 0 and 14
+# 15 is a stop parameter
+
+# to find the number of elements
+len(range_array) 
+range_array.size
+
+np.arange(1, 20, 5) #default type: int
+# 5 is a step parameter
+
+# linspace function creates a group of integers that are evenly or linearly spaced
+np.linspace(5, 15, 6)
+
+# create an array filled with 0s or 1s, default type: float
+np.zeros(10)
+np.ones(10)
+np.ones([5, 3]) #two-dimensional array
+
+# dtype can be changed as needed
