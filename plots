@@ -1,0 +1,31 @@
+# import packages
+import numpy as np
+import matplotlib.pyplot as plt 
+# more info on https://matplotlib.org/
+
+# figure - container thats holds all elements of plot(s)
+# subplot - appears within a rectangular grid within a figure
+
+my_figure = plt.figure('My figure')
+subplot_1 = my_figure.add_subplot(2, 3, 1)
+subplot_6 = my_figure.add_subplot(2, 3, 6)
+plt.plot(np.random.rand(50).cumsum().'k--') # k stands for black
+plt.show()
+
+# multiple lines in a single plot
+t1 = np.arange(0.0, 2.0, 0.1)
+t2 = np.arange(0.0, 2.0, 0.01)
+
+l1, = plt.plot(t2, np.exp(-t2))
+l2, l3 = plt.plot(t2, np.sin(2 * np.pi * t2), '--go', t1, np.log(1 + t1), '.')
+l4, = plt.plot(t2, np.exp(-t2) * np.sin(2 * np.pi * t2), 'rs-.')
+
+plt.legend((l2, l4), ('oscillatory', 'damped'), loc='upper right', shadow=True)
+plt.xlabel('time')
+plt.ylabel('volts')
+plt.title('Damped oscillation')
+plt.show()
+
+# plots can have more features such as tick marks, labels, grids, annorations
+# more information on how to plot different types of charts can be found in the matplotlib website
+# the gallery is a very help place to find source code, just remember to give the author credits
