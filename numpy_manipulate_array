@@ -1,0 +1,27 @@
+# when the data is stored in the same location in memory, different references are just views.
+# when use np.copy(), it will return a copy in a different location in memory.
+
+# attributes of array
+import numpy as np
+
+a = np.arange(50).reshape((2,3,4))
+a
+a.ndim # dimension
+a.shape # shape
+a.size
+a.dtype
+a.itemsize
+type(a)
+
+# append elements
+b = np.append(a, [30, 31, 32, 33])
+b
+b.reshape((7, 4))
+c = np.array(np.arange(36)).reshape(2,3,4) * 10 + 3
+c
+np.append(a,c, axis=2) # use the axis to appen the arrays together in different dimensions
+
+# horizontal stacking
+my_stack = np.hstack((a, c)) #create a new copy
+
+# insert and delete functions are available as well
